@@ -1,0 +1,22 @@
+{
+  "name": "are-agent-integrations",
+  "version": "0.1.0-alpha.0",
+  "private": true,
+  "description": "Govern MCP and agent framework tool calls with ARE Foundation policy checks.",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @srex/are-mcp-gateway",
+    "test": "npm test --workspace @srex/are-mcp-gateway",
+    "lint": "npm run lint --workspace @srex/are-mcp-gateway",
+    "pack:node": "npm pack --workspace @srex/are-mcp-gateway --dry-run",
+    "test:python": "python -m pytest -q python/tests",
+    "build:python": "python -m build python",
+    "bench:guardrail": "python benchmarks/guardrail-comparison/run_guardrail_comparison.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "are-mcp-gateway"
+version = "0.1.0a0"
+description = "Govern MCP and agent framework tool calls with ARE Foundation checks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+  { name = "SREX" }
+]
+keywords = ["mcp", "agents", "governance", "policy", "are"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.27.2"]
+dev = ["pytest>=8.0", "build>=1.2", "twine>=5.0"]
+
+[project.scripts]
+are-mcp-gateway-py = "are_mcp_gateway.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
