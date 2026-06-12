@@ -7,6 +7,12 @@ This repo is the integration beachhead for
 runnable examples that wrap agent tool calls with passport, scope, and policy
 checks before tools execute.
 
+Related adoption repos:
+
+- [ARE Starter Kits](https://github.com/srex-dev/are-starter-kits): run one governed workflow in minutes.
+- [ARE Policy Starter Packs](https://github.com/srex-dev/are-policy-starter-packs): public-safe Rego starter policies and fixtures.
+- [Homebrew ARE Tap](https://github.com/srex-dev/homebrew-are): local developer install helper.
+
 ```ts
 import { governMcpTool } from "@srex/are-mcp-gateway";
 
